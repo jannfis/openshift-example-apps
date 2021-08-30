@@ -11,4 +11,4 @@ spec:
   source:
     repoURL: https://github.com/jannfis/openshift-example-apps
     targetRevision: HEAD
-    path: child
+    path: app-of-apps/child
