@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-child
+  namespace: argocd-parent
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd-child
+  project: default
+  source:
+    repoURL: https://github.com/jannfis/openshift-example-apps
+    targetRevision: HEAD
+    path: child
